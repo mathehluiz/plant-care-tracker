@@ -1,7 +1,6 @@
 package domain
 
 import (
-	"fmt"
 	"time"
 
 	"github.com/mathehluiz/plant-care-tracker/internal/errs"
@@ -29,8 +28,6 @@ func NewCare(plantId, userId int64, nextCare time.Time, name, notes string) (*Ca
 	}
 	lastCare := time.Now()
 	if lastCare.After(nextCare) {
-		fmt.Println("nextCare", nextCare)
-		fmt.Println("lastCare", lastCare)
 		return nil, errs.ErrInvalidCareDate
 	}
 

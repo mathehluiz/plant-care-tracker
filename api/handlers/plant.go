@@ -2,7 +2,6 @@ package handlers
 
 import (
 	"errors"
-	"fmt"
 	"net/http"
 	"strconv"
 	"time"
@@ -24,12 +23,10 @@ func CreatePlant(storer domain.PlantStorer) gin.HandlerFunc {
 		userId := c.GetString("auth:bearer:id")
 		parsedUserId, err := strconv.ParseInt(userId, 10, 64)
 		if err != nil {
-			fmt.Println(err)
 			DefaultError(c, http.StatusBadRequest, errs.ErrInvalidBody)
 			return
 		}
 		if err := c.ShouldBindJSON(&req); err != nil {
-			fmt.Println(err)
 			DefaultError(c, http.StatusBadRequest, errs.ErrInvalidBody)
 			return
 		}

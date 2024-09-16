@@ -2,7 +2,6 @@ package handlers
 
 import (
 	"errors"
-	"fmt"
 	"net/http"
 	"strconv"
 	"time"
@@ -24,25 +23,21 @@ func CreateCare(storer domain.CareStorer) gin.HandlerFunc {
 		userId := c.GetString("auth:bearer:id")
 		parsedUserId, err := strconv.ParseInt(userId, 10, 64)
 		if err != nil {
-			fmt.Println(err)
 			DefaultError(c, http.StatusBadRequest, errs.ErrInvalidBody)
 			return
 		}
 		if err := c.ShouldBindJSON(&req); err != nil {
-			fmt.Println(err)
 			DefaultError(c, http.StatusBadRequest, errs.ErrInvalidBody)
 			return
 		}
 		validations := validate.Struct(req)
 		if len(validations) > 0 {
-			fmt.Println(validations)
 			DefaultError(c, http.StatusBadRequest, errs.ErrInvalidBody)
 			return
 		}
 
 		care, err := domain.NewCare(req.PlantId, parsedUserId, req.NextCare, req.Name, req.Notes)
 		if err != nil {
-			fmt.Println(err)
 			DefaultError(c, http.StatusBadRequest, err)
 			return
 		}
