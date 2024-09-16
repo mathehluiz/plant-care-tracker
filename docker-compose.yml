@@ -1,0 +1,33 @@
+volumes:
+  data:
+
+services:
+  postgres:
+    image: postgres:14.1-alpine
+    container_name: db
+    tty: true
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_USER=${DB_USER}
+      - POSTGRES_PASSWORD=${DB_PASS}
+      - POSTGRES_DB=${DB_NAME}
+    volumes:
+      - data:/var/lib/postgres
+    networks:
+      - ${DB_MIGRATIONS_NETWORK}
+
+  redis:
+    image: redis:6.2-alpine
+    container_name: redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - data:/var/lib/redis
+    networks:
+      - ${DB_MIGRATIONS_NETWORK}
+
+networks:
+  plant-care-tracker-network:
+    name: ${DB_MIGRATIONS_NETWORK}
+    driver: bridge

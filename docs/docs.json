@@ -1,0 +1,433 @@
+{
+  "_type": "export",
+  "__export_format": 4,
+  "__export_date": "2024-09-16T01:01:07.116Z",
+  "__export_source": "insomnia.desktop.app:v10.0.0",
+  "resources": [
+    {
+      "_id": "req_27dbe61b95aa47979c84c342edb4b163",
+      "parentId": "wrk_5d8fefd2724041789f8565c04ab0b69f",
+      "modified": 1726448435183,
+      "created": 1726442044443,
+      "url": "http://localhost:8080/api/v1/register",
+      "name": "Register user",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"username\": \"mathe\",\n\t\"email\": \"\",\n\t\"password\": \"\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        { "name": "Content-Type", "value": "application/json" },
+        { "name": "User-Agent", "value": "insomnia/10.0.0" }
+      ],
+      "authentication": {},
+      "metaSortKey": -1726350328930.5,
+      "isPrivate": false,
+      "pathParameters": [],
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "wrk_5d8fefd2724041789f8565c04ab0b69f",
+      "parentId": null,
+      "modified": 1726435097789,
+      "created": 1726435097789,
+      "name": "plant care tracker",
+      "description": "",
+      "scope": "collection",
+      "_type": "workspace"
+    },
+    {
+      "_id": "req_688fc1204ac642e7abea8d52f7f92b84",
+      "parentId": "wrk_5d8fefd2724041789f8565c04ab0b69f",
+      "modified": 1726448430305,
+      "created": 1726442320993,
+      "url": "http://localhost:8080/api/v1/login",
+      "name": "Login",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"email\": \"\",\n\t\"password\": \"\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        { "name": "Content-Type", "value": "application/json" },
+        { "name": "User-Agent", "value": "insomnia/10.0.0" }
+      ],
+      "authentication": {},
+      "metaSortKey": -1726329135854.125,
+      "isPrivate": false,
+      "pathParameters": [],
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_a429dd1040c7445f9db3e2a0b6b9895e",
+      "parentId": "wrk_5d8fefd2724041789f8565c04ab0b69f",
+      "modified": 1726442268801,
+      "created": 1726442205110,
+      "url": "http://localhost:8080/api/v1/verify-email",
+      "name": "Verify email",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"code\": \"693892\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        { "name": "Content-Type", "value": "application/json" },
+        { "name": "User-Agent", "value": "insomnia/10.0.0" }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MjY1Mjg1OTUsImlhdCI6MTcyNjQ0MjE5NSwiaXNzIjoicGxhbnQtY2FyZS10cmFja2VyIiwic3ViIjoiOGQ2Zjg0ZTgtNzNiOC0xMWVmLWFkMTAtMDI0MmMwYThhNTAyIiwiUm9sZXMiOlsiIl0sIlZlcmlmaWVkIjpmYWxzZX0.s7HszsJr9rxLOkL0uC5SUHtDeisBbSwuoLmWJYUvAFg"
+      },
+      "metaSortKey": -1726307942777.75,
+      "isPrivate": false,
+      "pathParameters": [],
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_dceeb34ebed3434ca24777544c1786bf",
+      "parentId": "wrk_5d8fefd2724041789f8565c04ab0b69f",
+      "modified": 1726445159853,
+      "created": 1726442292700,
+      "url": "http://localhost:8080/api/v1/plants",
+      "name": "Create plant",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"name\": \"Rosa\",\n\t\"location\": \"quintal\",\n\t\"acquisitionDate\": \"2024-09-15T00:00:00Z\",\n\t\"careFrequency\": 7\n}"
+      },
+      "parameters": [],
+      "headers": [
+        { "name": "Content-Type", "value": "application/json" },
+        { "name": "User-Agent", "value": "insomnia/10.0.0" }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MjY1MzE1NTEsImlhdCI6MTcyNjQ0NTE1MSwiaXNzIjoicGxhbnQtY2FyZS10cmFja2VyIiwic3ViIjoiMiIsIlJvbGVzIjpbXSwiVmVyaWZpZWQiOnRydWV9.74mrsMKmtLNG9VGsOs1JVxtqGapGqJ2VMESoJiPL2WA"
+      },
+      "metaSortKey": -1726286749701.375,
+      "isPrivate": false,
+      "pathParameters": [],
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_bb62874a70ad4416beefaed754ec0d2c",
+      "parentId": "wrk_5d8fefd2724041789f8565c04ab0b69f",
+      "modified": 1726445488496,
+      "created": 1726444690137,
+      "url": "http://localhost:8080/api/v1/cares",
+      "name": "Create care",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"plantId\": 3,\n\t\"nextCare\": \"2024-09-17T00:00:00Z\",\n\t\"name\": \"water\",\n\t\"notes\": \"three times a day\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        { "name": "Content-Type", "value": "application/json" },
+        { "name": "User-Agent", "value": "insomnia/10.0.0" }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MjY1MzE1NTEsImlhdCI6MTcyNjQ0NTE1MSwiaXNzIjoicGxhbnQtY2FyZS10cmFja2VyIiwic3ViIjoiMiIsIlJvbGVzIjpbXSwiVmVyaWZpZWQiOnRydWV9.74mrsMKmtLNG9VGsOs1JVxtqGapGqJ2VMESoJiPL2WA"
+      },
+      "metaSortKey": -1726281451432.2812,
+      "isPrivate": false,
+      "pathParameters": [],
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_e924830aa1c74cccaaf5c937e229a080",
+      "parentId": "wrk_5d8fefd2724041789f8565c04ab0b69f",
+      "modified": 1726445989970,
+      "created": 1726445769732,
+      "url": "http://localhost:8080/api/v1/cares/2",
+      "name": "Get care",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [{ "name": "User-Agent", "value": "insomnia/10.0.0" }],
+      "authentication": {
+        "type": "bearer",
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MjY1MzE1NTEsImlhdCI6MTcyNjQ0NTE1MSwiaXNzIjoicGxhbnQtY2FyZS10cmFja2VyIiwic3ViIjoiMiIsIlJvbGVzIjpbXSwiVmVyaWZpZWQiOnRydWV9.74mrsMKmtLNG9VGsOs1JVxtqGapGqJ2VMESoJiPL2WA"
+      },
+      "metaSortKey": -1726280126865.0078,
+      "isPrivate": false,
+      "pathParameters": [],
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_271d3967fb8542949783a3c7c58aeec6",
+      "parentId": "wrk_5d8fefd2724041789f8565c04ab0b69f",
+      "modified": 1726447250278,
+      "created": 1726445499221,
+      "url": "http://localhost:8080/api/v1/cares/plant/3",
+      "name": "Get plant cares",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [{ "name": "User-Agent", "value": "insomnia/10.0.0" }],
+      "authentication": {
+        "type": "bearer",
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MjY1MzE1NTEsImlhdCI6MTcyNjQ0NTE1MSwiaXNzIjoicGxhbnQtY2FyZS10cmFja2VyIiwic3ViIjoiMiIsIlJvbGVzIjpbXSwiVmVyaWZpZWQiOnRydWV9.74mrsMKmtLNG9VGsOs1JVxtqGapGqJ2VMESoJiPL2WA"
+      },
+      "metaSortKey": -1726278802297.7344,
+      "isPrivate": false,
+      "pathParameters": [],
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_3d0fdf285b3b452da11e087ff3cb6172",
+      "parentId": "wrk_5d8fefd2724041789f8565c04ab0b69f",
+      "modified": 1726447213820,
+      "created": 1726442544389,
+      "url": "http://localhost:8080/api/v1/plants/3",
+      "name": "Get plant",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [{ "name": "User-Agent", "value": "insomnia/10.0.0" }],
+      "authentication": {
+        "type": "bearer",
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MjY1MzE1NTEsImlhdCI6MTcyNjQ0NTE1MSwiaXNzIjoicGxhbnQtY2FyZS10cmFja2VyIiwic3ViIjoiMiIsIlJvbGVzIjpbXSwiVmVyaWZpZWQiOnRydWV9.74mrsMKmtLNG9VGsOs1JVxtqGapGqJ2VMESoJiPL2WA",
+        "disabled": false
+      },
+      "metaSortKey": -1726276153163.1875,
+      "isPrivate": false,
+      "pathParameters": [],
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_a8afa7ef9bdc4f3d9e21bec2c0b55ec0",
+      "parentId": "wrk_5d8fefd2724041789f8565c04ab0b69f",
+      "modified": 1726447233658,
+      "created": 1726447232260,
+      "url": "http://localhost:8080/api/v1/plants",
+      "name": "Get user plants",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [{ "name": "User-Agent", "value": "insomnia/10.0.0" }],
+      "authentication": {
+        "type": "bearer",
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MjY1MzE1NTEsImlhdCI6MTcyNjQ0NTE1MSwiaXNzIjoicGxhbnQtY2FyZS10cmFja2VyIiwic3ViIjoiMiIsIlJvbGVzIjpbXSwiVmVyaWZpZWQiOnRydWV9.74mrsMKmtLNG9VGsOs1JVxtqGapGqJ2VMESoJiPL2WA",
+        "disabled": false
+      },
+      "metaSortKey": -1726273504028.6406,
+      "isPrivate": false,
+      "pathParameters": [],
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_fc301c0594b74e8d8bbc634b2b5f750c",
+      "parentId": "wrk_5d8fefd2724041789f8565c04ab0b69f",
+      "modified": 1726445166705,
+      "created": 1726442580350,
+      "url": "http://localhost:8080/api/v1/plants/2",
+      "name": "Update plant",
+      "description": "",
+      "method": "PATCH",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"name\": \"Samambaia\",\n\t\"location\": \"sala\",\n\t\"acquisitionDate\": \"2024-09-15T00:00:00Z\",\n\t\"careFrequency\": 5\n}"
+      },
+      "parameters": [],
+      "headers": [
+        { "name": "Content-Type", "value": "application/json" },
+        { "name": "User-Agent", "value": "insomnia/10.0.0" }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MjY1MzE1NTEsImlhdCI6MTcyNjQ0NTE1MSwiaXNzIjoicGxhbnQtY2FyZS10cmFja2VyIiwic3ViIjoiMiIsIlJvbGVzIjpbXSwiVmVyaWZpZWQiOnRydWV9.74mrsMKmtLNG9VGsOs1JVxtqGapGqJ2VMESoJiPL2WA",
+        "disabled": false
+      },
+      "metaSortKey": -1726270854894.0938,
+      "isPrivate": false,
+      "pathParameters": [],
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_09acf2ded1284d379e3c9e950687aa5a",
+      "parentId": "wrk_5d8fefd2724041789f8565c04ab0b69f",
+      "modified": 1726447412079,
+      "created": 1726447299895,
+      "url": "http://localhost:8080/api/v1/cares/1",
+      "name": "Update care",
+      "description": "",
+      "method": "PATCH",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"plantId\": 3,\n\t\"nextCare\": \"2024-09-17T00:00:00Z\",\n\t\"name\": \"water\",\n\t\"notes\": \"four times a day\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        { "name": "Content-Type", "value": "application/json" },
+        { "name": "User-Agent", "value": "insomnia/10.0.0" }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MjY1MzE1NTEsImlhdCI6MTcyNjQ0NTE1MSwiaXNzIjoicGxhbnQtY2FyZS10cmFja2VyIiwic3ViIjoiMiIsIlJvbGVzIjpbXSwiVmVyaWZpZWQiOnRydWV9.74mrsMKmtLNG9VGsOs1JVxtqGapGqJ2VMESoJiPL2WA",
+        "disabled": false
+      },
+      "metaSortKey": -1726269530326.8203,
+      "isPrivate": false,
+      "pathParameters": [],
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_7c6d20a3d5544bbfa6630225532b776e",
+      "parentId": "wrk_5d8fefd2724041789f8565c04ab0b69f",
+      "modified": 1726447421666,
+      "created": 1726447408188,
+      "url": "http://localhost:8080/api/v1/cares/1",
+      "name": "Delete care",
+      "description": "",
+      "method": "DELETE",
+      "body": {},
+      "parameters": [],
+      "headers": [{ "name": "User-Agent", "value": "insomnia/10.0.0" }],
+      "authentication": {
+        "type": "bearer",
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MjY1MzE1NTEsImlhdCI6MTcyNjQ0NTE1MSwiaXNzIjoicGxhbnQtY2FyZS10cmFja2VyIiwic3ViIjoiMiIsIlJvbGVzIjpbXSwiVmVyaWZpZWQiOnRydWV9.74mrsMKmtLNG9VGsOs1JVxtqGapGqJ2VMESoJiPL2WA",
+        "disabled": false
+      },
+      "metaSortKey": -1726268868043.1836,
+      "isPrivate": false,
+      "pathParameters": [],
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_ff0f1e1540494b4cb2da1cf70893a130",
+      "parentId": "wrk_5d8fefd2724041789f8565c04ab0b69f",
+      "modified": 1726445168940,
+      "created": 1726442630054,
+      "url": "http://localhost:8080/api/v1/plants/2",
+      "name": "Delete plant",
+      "description": "",
+      "method": "DELETE",
+      "body": {},
+      "parameters": [],
+      "headers": [{ "name": "User-Agent", "value": "insomnia/10.0.0" }],
+      "authentication": {
+        "type": "bearer",
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MjY1MzE1NTEsImlhdCI6MTcyNjQ0NTE1MSwiaXNzIjoicGxhbnQtY2FyZS10cmFja2VyIiwic3ViIjoiMiIsIlJvbGVzIjpbXSwiVmVyaWZpZWQiOnRydWV9.74mrsMKmtLNG9VGsOs1JVxtqGapGqJ2VMESoJiPL2WA",
+        "disabled": false
+      },
+      "metaSortKey": -1726268205759.5469,
+      "isPrivate": false,
+      "pathParameters": [],
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "env_9ca0220c25bbc493a2722144635c85da1acee219",
+      "parentId": "wrk_5d8fefd2724041789f8565c04ab0b69f",
+      "modified": 1726435097790,
+      "created": 1726435097790,
+      "name": "Base Environment",
+      "data": {},
+      "dataPropertyOrder": null,
+      "color": null,
+      "isPrivate": false,
+      "metaSortKey": 1726435097790,
+      "_type": "environment"
+    },
+    {
+      "_id": "jar_9ca0220c25bbc493a2722144635c85da1acee219",
+      "parentId": "wrk_5d8fefd2724041789f8565c04ab0b69f",
+      "modified": 1726435097791,
+      "created": 1726435097791,
+      "name": "Default Jar",
+      "cookies": [],
+      "_type": "cookie_jar"
+    }
+  ]
+}
